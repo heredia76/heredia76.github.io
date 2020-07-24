@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/index.css">
+    <title>HOME_PAGE</title>
+    <title>PREFÁCIO</title>
+  </head>
+      <body>
+
+          <header class="cabecalho">
+                  </header>
+                  <h1 style="text-align:center;">Bem-Vindo(a) a minha Página</h1>
+                  <center>
+                    <a href="https://github.com/heredia76/">
+                      <img src="images/perfil2.jpg" alt="">
+                    </a>
+                  </center>
+                  <p style=text-align:center;">Olá, meu nome é WAnderson Tadeu Gonçalves ,Sou Analista de Sistema."</p>
+                  <p style="text-align:center;">Contato: wheredia2@gmail.com</p>
+          </header>
+          <nav class="navegacao">
+              <a class="verde" href=<?= "/{$_GET['dir']}/{$_GET['file']}.php" ?> Sem formatação</a>
+              <a href="index.php" class="vermelho">Voltar</a>
+          </nav>
+          <main class="principal">
+              <div class="conteudo">
+                  <?php
+                      include(__DIR__ . "/{$_GET['dir']}/{$_GET['file']}.php");
+                  ?>
+              </div>
+          </main>
+          <footer class="rodape">
+              OrioN © <?= date('Y'); ?>
+          </footer>
+      </body>
+  </html>
